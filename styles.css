@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+:root {
+  --black: #000000;
+  --dark-grey: #7d7d7d;
+  --medium-grey: #e5e5e5;
+  --light-grey: #f3f3f3;
+  --white: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+
+  background-color: var(--white);
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 700;
+}
+h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+}
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+/* ***NAV Content*** */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--medium-grey);
+}
+nav a {
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--medium-grey);
+  padding-top: 10px;
+}
+nav a:hover {
+  color: var(--black);
+}
+@media (max-width: 600px) {
+  nav a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 350px) {
+  nav img {
+    width: 120px;
+    height: 40px;
+  }
+}
+
+/* ****MAIN Content*** */
+.main-container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* @supports (grid-template-rows: masonry) {
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-template-rows: masonry;
+
+    display: column;
+  columns: 3;
+  }
+  .main-container > * {
+    margin-bottom: 0;
+  }
+} */
+.main-container:after {
+  content: "";
+  display: block;
+
+  clear: both;
+}
+.box-content {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid red;
+  margin-bottom: 15px;
+  float: left;
+}
+.box-content img {
+  width: 310px;
+  height: auto;
+  object-fit: cover;
+}
+.box-content--width {
+  width: 310px;
+}
+.box-content--height1 img {
+  height: 250px;
+}
+.box-content--height2 img {
+  height: 400px;
+}
+.box-content--height3 img {
+  height: 285px;
+}
+.box-content--height4 img {
+  height: 250px;
+}
+.box-content--height5 img {
+  height: 340px;
+}
+.box-content--height6 img {
+  height: 280px;
+}
+.box-content--height7 img {
+  height: 500px;
+}
+.box-content--height8 img {
+  height: 250px;
+}
+.box-content--height9 img {
+  height: 420px;
+}
+.box-content--height10 img {
+  height: 260px;
+}
+.box-content--height12 img {
+  height: 430px;
+}
+.box-content--height13 img {
+  height: 260px;
+}
+.box-content--height14 img {
+  height: 330px;
+}
+
+.box-content--height11 img {
+  height: 510px;
+}
+.box-content--height15 img {
+  height: 340px;
+  position: absolute;
+  top: -363px;
+  left: 325px;
+}
+.box-content:hover {
+  opacity: 0.5;
+}
+
+.box-text {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  padding: 20px 20px 20px;
+}
+.box-text h1,
+h2 {
+  color: var(--white);
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.box-text p {
+  color: var(--white);
+}
+.box-text--img15 {
+  position: absolute;
+  bottom: 20px;
+  left: 320px;
+}
+.box-text--img15 h1 {
+  width: 200px;
+}
+@media (min-width: 1001px) and (max-width: 1400px) {
+  .main-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .main-container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 322px) and (max-width: 599px) {
+  .main-container {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .box-content--width,
+  .box-content--width img {
+    width: 300px;
+  }
+  .box-content--height15 img {
+    left: 0px;
+    top: 20px;
+  }
+
+  .box-text--img15 {
+    position: absolute;
+    bottom: 20px;
+    top: 270px;
+    left: 0px;
+  }
+}
+@media (min-width: 250px) and (max-width: 321px) {
+  .main-container {
+    width: 100%;
+    margin-left: 7%;
+  }
+  .box-content--width,
+  .box-content--width img {
+    width: 280px;
+  }
+  .box-content--height15 img {
+    left: 0px;
+    top: 20px;
+  }
+  .box-text--img15 {
+    position: absolute;
+    bottom: 20px;
+    top: 270px;
+    left: 0px;
+  }
+}
