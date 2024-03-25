@@ -247,3 +247,116 @@ h2 {
     left: 0px;
   }
 }
+/* ***INDEX.HTML Page *** */
+/* ***SLIDESHOW Container*** */
+.slideshow-page {
+  width: 90%;
+  margin: 20px auto;
+}
+.slideshow-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.slideshow-main--content {
+  display: flex;
+  column-gap: 30px;
+}
+.main-content--left {
+  display: grid;
+  grid-template-columns: repeat(9, 100px);
+}
+.content-left--mainImg {
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 4;
+}
+.content-left--mainImg > img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.content-left--heading {
+  grid-column: 6 / -1;
+  grid-row: 1 / 3;
+  padding: 0 50px 50px 50px;
+  background-color: var(--white);
+  width: 300px;
+}
+.slideshow-page h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 150px;
+  color: var(--light-grey);
+  margin-top: 30px;
+}
+.slideshow-page h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+.slideshow-page p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 14px;
+  line-height: 3.2;
+  color: var(--dark-grey);
+}
+.content-left--artistImg {
+  grid-column: 8;
+  grid-row: 4 / span 2;
+}
+.main-content--right {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 100px;
+}
+.slideshow-container a {
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+.slideshow-container a:hover {
+  color: var(--black);
+}
+
+.slideshow-bottom--links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom-links--arrows {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  cursor: pointer;
+}
+@media (min-width: 600px) and (max-width: 1100px) {
+  .slideshow-main--content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}
+@media (min-width: 319px) and (max-width: 599px) {
+  .slideshow-main--content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+  .main-content--left {
+    grid-template-columns: repeat(3, 100px);
+  }
+  .content-left--mainImg {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 3;
+  }
+  .content-left--mainImg {
+    background: url("./assets/starry-night/hero-small.jpg");
+    background-size: contain;
+  }
+  .content-left--heading {
+    grid-column: 1 / span 8;
+    grid-row: 2 / span 2;
+  }
+  .content-left--artistImg {
+    grid-column: 1;
+    grid-row: 6;
+  }
+}
