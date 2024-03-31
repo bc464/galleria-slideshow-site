@@ -263,8 +263,18 @@ h2 {
 
 /* ***SLIDESHOW Container*** */
 .slideshow-page {
-  width: 90%;
+  width: 100%;
   margin: 20px auto;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: none;
 }
 .slideshow-container {
   display: flex;
@@ -310,20 +320,20 @@ h2 {
   background-color: var(--white);
   width: 400px;
 }
-.slideshow-page h1 {
+.slideshow-main--content h1 {
   font-family: "Libre Baskerville", serif;
   font-size: 150px;
   color: var(--light-grey);
   margin-top: 30px;
 }
-.slideshow-page h2 {
+.slideshow-main--content h2 {
   font-family: "Libre Baskerville", serif;
   font-size: 56px;
   line-height: 1;
   color: var(--black);
   margin-bottom: 10px;
 }
-.slideshow-page p {
+.slideshow-main--content p {
   font-family: "Libre Baskerville", serif;
   font-size: 14px;
   line-height: 3.2;
@@ -358,16 +368,36 @@ h2 {
   column-gap: 20px;
   cursor: pointer;
 }
+.button:hover {
+  filter: invert(77%) sepia(95%) saturate(0%) hue-rotate(75deg) brightness(98%)
+    contrast(99%);
+}
+.disabled {
+  filter: invert(99%) sepia(89%) saturate(8%) hue-rotate(298deg)
+    brightness(116%) contrast(91%);
+  cursor: none;
+}
+/* ***Progress Bar **** */
+#progressBar {
+  width: 100%;
+  height: 5px;
+  background-color: var(--medium-grey);
 
+  margin: 20px 0;
+}
+.progressBar-fill {
+  width: 0%;
+  height: 100%;
+}
 /* **MODULE COntainer*** */
 .module-container {
   position: absolute;
-  top: 200px;
+  top: 10%;
   left: 50%;
   transform: translate(-50%);
   display: none;
   margin: 0 auto;
-  z-index: 100;
+  z-index: 1000;
 }
 picture {
   display: flex;
@@ -394,6 +424,7 @@ picture {
   }
   .content-left--heading {
     grid-column: 4 / -1;
+    width: 500px;
   }
   .content-left--artistImg {
     grid-column: 7;
@@ -416,11 +447,11 @@ picture {
     flex-direction: column;
     row-gap: 0px;
   }
-  .slideshow-page h1 {
+  .slideshow-main--content h1 {
     font-size: 100px;
     margin-left: 35%;
   }
-  .slideshow-page h2 {
+  .slideshow-main--content h2 {
     font-size: 24px;
     line-height: 0.5;
   }

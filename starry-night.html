@@ -20,7 +20,8 @@
       <a href="index.html"><img src="./assets/shared/logo.svg" alt="logo" /></a>
       <a href="#">START SLIDESHOW</a>
     </nav>
-    <main id="slide-show" class="slideshow-page">
+    <main id="slide-show" class="main-container">
+      <div id="overlay"></div>
       <section class="slideshow-container">
         <div class="slideshow-main--content">
           <div class="main-content--left">
@@ -65,7 +66,7 @@
             >
           </div>
         </div>
-        <hr />
+        <div id="progressBar" class="progressBar--fill"></div>
         <div class="slideshow-bottom--links">
           <div class="bottom-links--name">
             <h3>Starry Night</h3>
@@ -75,12 +76,14 @@
             <img
               src="./assets/shared/icon-back-button.svg"
               alt="icon back button"
-              class="button back-button"
+              id="prevButton"
+              class="button"
             />
             <img
               src="./assets/shared/icon-next-button.svg"
               alt="next-button icon"
-              class="button next-button"
+              id="nextButton"
+              class="button"
             />
           </div>
         </div>
