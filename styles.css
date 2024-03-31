@@ -352,6 +352,12 @@ h2 {
   align-items: center;
   justify-content: space-between;
 }
+.slideshow-bottom--links h2 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--black);
+}
 .bottom-links--arrows {
   display: flex;
   align-items: center;
@@ -466,6 +472,11 @@ picture {
   .slideshow-main--content h2 {
     font-size: 24px;
     line-height: 1.5;
+  }
+  .slideshow-bottom--links h2 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
   }
   .main-content--left {
     grid-template-columns: repeat(3, 1fr);

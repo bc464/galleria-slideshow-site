@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const { name, artist, year, description, source } = data[index];
             let newName = name.toLowerCase().replace(/\s+/g, "-");
 
-            mainContainer.innerHTML = `<main id="slideshowContainerId" class="slideshow-page slideshow-container">
+            mainContainer.innerHTML = `<div class="slideshow-page slideshow-container">
 
             <div id="overlay"></div>
             <div class="slideshow-main--content">
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div id="progressBar" class="progressBar-fill"></div>
         <div class="slideshow-bottom--links">
           <div class="bottom-links--name">
-            <h3>${name}</h3>
+            <h2>${name}</h2>
             <p>${artist.name}</p>
           </div>
           <div class="bottom-links--arrows">
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
          </section>
-    </main>
+    </div>
     <div role="contentinfo" class="module-container">
       <button class="btn-close">CLOSE</button>
       <picture>
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
         slideshowContainer.innerHTML = `
-    <main id="slide-show" class="slideshow-page" >
+    <div class="slideshow-page" >
       <div id="overlay"></div>
       <div class="slideshow-main--content">
           <div class="main-content--left">
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div id="progressBar" class="progressBar-fill"></div>
         <div class="slideshow-bottom--links">
           <div class="bottom-links--name">
-            <h3>${name}</h3>
+            <h2>${name}</h2>
             <p>${artist.name}</p>
           </div>
           <div class="bottom-links--arrows">
@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
          </section>
-    </main>
+    </div>
     <div role="contentinfo" class="module-container">
       <button class="btn-close">CLOSE</button>
       <picture>
