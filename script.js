@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
       `;
-
+            window.scrollTo(0, 0);
             viewingImage();
             attachEventListeners();
             updateButtons();
@@ -213,11 +213,13 @@ document.addEventListener("DOMContentLoaded", function () {
     prevButton.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + jsonData.length) % jsonData.length;
       functionsCalledByButtons();
+      window.scrollTo(0, 0);
     });
 
     nextButton.addEventListener("click", () => {
       currentIndex = (currentIndex + 1) % jsonData.length;
       functionsCalledByButtons();
+      window.scrollTo(0, 0);
     });
   }
   // grouping functions that are called by prev/next buttons
@@ -265,4 +267,5 @@ document.addEventListener("DOMContentLoaded", function () {
     let progress = Math.round((currentIndex / 14) * 100);
     progressBarFill.style.width = `${progress}%`;
   }
+  window.scrollTo(0, 0);
 });

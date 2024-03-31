@@ -80,19 +80,6 @@ nav a:hover {
   margin: 20px auto;
 }
 
-/* @supports (grid-template-rows: masonry) {
-  .main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
-    grid-template-rows: masonry;
-
-    display: column;
-  columns: 3;
-  }
-  .main-container > * {
-    margin-bottom: 0;
-  }
-} */
 .main-container:after {
   content: "";
   display: block;
@@ -296,7 +283,7 @@ h2 {
   grid-row: 1 / span 4;
 }
 .content-left--mainImg > img {
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .viewImageLink {
@@ -343,6 +330,9 @@ h2 {
   grid-column: 8;
   grid-row: 4 / span 2;
 }
+.content-left--artistImg img {
+  width: 100px;
+}
 .main-content--right {
   display: flex;
   flex-direction: column;
@@ -380,8 +370,8 @@ h2 {
 /* ***Progress Bar **** */
 #progressBar {
   width: 100%;
-  height: 5px;
-  background-color: var(--medium-grey);
+  height: 3px;
+  background-color: var(--black);
 
   margin: 20px 0;
 }
@@ -414,17 +404,34 @@ picture {
 .btn-close:hover {
   color: var(--dark-grey);
 }
-@media (min-width: 600px) and (max-width: 1100px) {
+@media (min-width: 769px) and (max-width: 1100px) {
+  .slideshow-page {
+    width: 90%;
+    margin-left: 5%;
+  }
   .slideshow-main--content {
     flex-direction: column;
     row-gap: 40px;
   }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .main-container {
+    width: 90%;
+  }
+  .slideshow-page {
+    width: 100%;
+    margin-left: 0;
+  }
+  .slideshow-main--content {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
   .content-left--mainImg {
     grid-column: 1 / span 5;
   }
   .content-left--heading {
     grid-column: 4 / -1;
-    width: 500px;
   }
   .content-left--artistImg {
     grid-column: 7;
@@ -443,17 +450,22 @@ picture {
   }
 }
 @media (min-width: 319px) and (max-width: 599px) {
+  #slide-show {
+    width: 90%;
+    margin-left: 3%;
+  }
+
   .slideshow-main--content {
     flex-direction: column;
     row-gap: 0px;
   }
   .slideshow-main--content h1 {
     font-size: 100px;
-    margin-left: 35%;
+    margin-left: 25%;
   }
   .slideshow-main--content h2 {
     font-size: 24px;
-    line-height: 0.5;
+    line-height: 1.5;
   }
   .main-content--left {
     grid-template-columns: repeat(3, 1fr);
@@ -472,6 +484,7 @@ picture {
     grid-row: 3 / span 2;
     width: 280px;
     padding-top: 20px;
+    width: 250px;
   }
   .content-left--artistImg {
     grid-column: 1;
